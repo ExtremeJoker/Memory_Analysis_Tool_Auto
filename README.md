@@ -33,7 +33,7 @@ git clone https://github.com/ExtremeJoker/Memory_Analysis_Tool_Auto.git
 cd Memory_Analysis_Tool_Auto
 
 2. Make the scripts executable
-chmod +x mem_anal_main.sh mem_anal_checks.sh mem_anal_carving.sh
+chmod +x mem_anal_main.sh mem_anal_checks.sh mem_anal_carving.sh mem_anal_vol.sh mem_anal_sum.sh
 
 3. Ensure prerequisites are available
 The script will check for and offer to install missing tools automatically, but you'll need the following available on your system first:
