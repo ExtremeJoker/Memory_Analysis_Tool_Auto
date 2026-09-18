@@ -3,6 +3,7 @@
 source ./mem_anal_checks.sh
 source ./mem_anal_carving.sh
 source ./mem_anal_sum.sh
+source ./mem_anal_vol.sh
 
 #Timer to record the script's run 
 SECONDS=0
@@ -25,10 +26,15 @@ checktools
 sleep 2
 installtools
 
+
 #Carving investigation of file for investigation
 bulkextractor
 sleep 2
 foremost_
 sleep 2
+#Volatility investigation of file for investigation
+volcheck
+sleep 2
+#Statistics of Investigation
 genstats
 echo "=====================================TASK COMPLETED======================================"
