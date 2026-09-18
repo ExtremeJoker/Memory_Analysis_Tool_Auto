@@ -1,6 +1,6 @@
 # Memory Analysis Tool
 
-A modular DFIR automation toolkit written in Bash, built to carve memory evidence with bulk_extractor/foremost and verify integrity via SHA256 hashing at every evidence-handling step.
+A modular DFIR automation toolkit written in Bash, built to carve memory evidence with bulk_extractor/foremost, enumerate processes, network activity, command history, loaded modules, registry hives, and credential/SID data via Volatility (2 and 3), and verify integrity via SHA256 hashing at every evidence-handling step.
 
 ## About This Project
 Bash-based automation system for investigating memory image files, aimed at reducing the repetitive manual setup that usually precedes actual forensic analysis.
