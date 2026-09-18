@@ -53,13 +53,6 @@ installtools
 
 ## Usage
 ```bash
-sudo ./mem_anal_main.sh
-Prompted for
-- File to analyse - filename (script will search the current directory tree for it)
-- Output directory - All carved evidence, hashes, and reports will be stored. Created automatically  if it does not exist.
-
-Example session:
-
 $ sudo bash ./mem_anal_main.sh
 sudo privilege detected
 Please input the file OR the filename: file.mem
@@ -78,19 +71,69 @@ Choose a string search method:
 Selection [1-6]: 5
 Scan complete. High-confidence: 0 | Possible MD5: 2 | Possible SHA1: 0 | Possible SHA256: 1
 ...
+Begin Volatility analysis
+Detected profile: Win10x64_19041
+  --- Volatility 2 ---
+  [*] pslist      -> vol2_pslist_26-09-14_08-01-47.txt
+  [*] psscan      -> vol2_psscan_26-09-14_08-01-47.txt
+  [*] connscan    -> vol2_connscan_26-09-14_08-01-47.txt
+  [*] netscan     -> vol2_netscan_26-09-14_08-01-47.txt
+  [*] consoles    -> vol2_consoles_26-09-14_08-01-47.txt
+  [*] cmdscan     -> vol2_cmdscan_26-09-14_08-01-47.txt
+  [*] cmdline     -> vol2_cmdline_26-09-14_08-01-47.txt
+  [*] dllist      -> vol2_dllist_26-09-14_08-01-47.txt
+  [*] hivelist    -> vol2_hivelist_26-09-14_08-01-47.txt
+  [*] hashdump    -> vol2_hashdump_26-09-14_08-01-47.txt
+  [*] lsadump     -> vol2_lsadump_26-09-14_08-01-47.txt
+  [*] getsids     -> vol2_getsids_26-09-14_08-01-47.txt
+
+  --- Volatility 3 ---
+  [*] pslist      -> vol3_pslist_26-09-14_08-01-47.txt
+  [*] psscan      -> vol3_psscan_26-09-14_08-01-47.txt
+  [*] netscan     -> vol3_netscan_26-09-14_08-01-47.txt
+  [*] cmdline     -> vol3_cmdline_26-09-14_08-01-47.txt
+  [*] dllist      -> vol3_dllist_26-09-14_08-01-47.txt
+  [*] hivelist    -> vol3_hivelist_26-09-14_08-01-47.txt
+  [*] getsids     -> vol3_getsids_26-09-14_08-01-47.txt
+
+Volatility output hashed and logged.
+...
 Time of Analysis: 47 seconds
 Number of found files: 118
 
 A credential/hash pattern scan was run during this session:
   High-confidence: 0 | Possible MD5: 2 | Possible SHA1: 0 | Possible SHA256: 1
 
-Output structure (example):
+Volatility 2 and Volatility 3 analysis completed: 19 plugin outputs generated.
 
 case_001/
 ├── bulk_file.mem_26-09-14_08-01-47/
 ├── foremost_file.mem_Mon_Sep_14_.../
+├── vol2_file.mem_26-09-14_08-01-47/
+│   ├── pslist.txt
+│   ├── psscan.txt
+│   ├── connscan.txt
+│   ├── netscan.txt
+│   ├── consoles.txt
+│   ├── cmdscan.txt
+│   ├── cmdline.txt
+│   ├── dllist.txt
+│   ├── hivelist.txt
+│   ├── hashdump.txt
+│   ├── lsadump.txt
+│   └── getsids.txt
+├── vol3_file.mem_26-09-14_08-01-47/
+│   ├── pslist.txt
+│   ├── psscan.txt
+│   ├── netscan.txt
+│   ├── cmdline.txt
+│   ├── dllist.txt
+│   ├── hivelist.txt
+│   └── getsids.txt
 ├── bulk_file.mem_26-09-14_08-01-47_manifest.sha256
 ├── foremost_file.mem_Mon_Sep_14_..._manifest.sha256
+├── vol2_file.mem_26-09-14_08-01-47_manifest
+├── vol3_file.mem_26-09-14_08-01-47_manifest
 ├── original_evidence_26-09-14_08-01-47.sha256
 ├── password_hash_report_26-09-14_08-01-47.txt
 └── Strings_EMAIL.txt
