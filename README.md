@@ -9,7 +9,7 @@ The combination of bulk_extractor and foremost specifically to widen investigati
 
 A key goal was making sure automation didn't come at the cost of evidence integrity. I implemented SHA256 hash verification at each point where a file is moved or relocated during the pipeline, so I can confirm rather than assume that a file's contents are unchanged after being handled by the script. This isn't a full chain-of-custody system, but it gave me a concrete way to practice thinking about evidence handling with the same seriousness I'd want in a real investigative context.
 
-This project also became a way to explore my own interest in DFIR and threat intelligence handson not just running tools, but thinking about why an investigative workflow should be structured a certain way, what could go wrong with unverified automation, and how to build something an analyst could actually trust the output of.
+This project also became a way to explore my own interest in DFIR and threat intelligence hands on not just running tools, but thinking about why an investigative workflow should be structured a certain way, what could go wrong with unverified automation, and how to build something an analyst could actually trust the output of.
 
 ## Features
 Timestamped output and every run generates a unique, timestamped output directory, which supports an evidentiary record of exactly when each artifact was produced.
@@ -23,7 +23,7 @@ Sourced, function-library architecture checks, carving/hashing, and search logic
 
 ## Tech Stack
 - **Language:** Bash
-- **Tools:** bulk_extractor, foremost, sha256sum, find, strings, grep, du, apt, pip
+- **Tools:** apt, bulk_extractor, du, find, grep, foremost, sha256sum, strings, pip, volatility2, volatility3
 - **Environment:** Developed and tested on Kali Linux
 
 ## Installation
@@ -60,7 +60,7 @@ Prompted for
 
 Example session:
 
-$ sudo ./mem_anal_main.sh
+$ sudo bash ./mem_anal_main.sh
 sudo privilege detected
 Please input the file OR the filename: file.mem
 File for analysing found. Proceeding...
