@@ -132,8 +132,8 @@ case_001/
 │   └── getsids.txt
 ├── bulk_file.mem_26-09-14_08-01-47_manifest.sha256
 ├── foremost_file.mem_Mon_Sep_14_..._manifest.sha256
-├── vol2_file.mem_26-09-14_08-01-47_manifest
-├── vol3_file.mem_26-09-14_08-01-47_manifest
+├── vol2_file.mem_26-09-14_08-01-47
+├── vol3_file.mem_26-09-14_08-01-47
 ├── original_evidence_26-09-14_08-01-47.sha256
 ├── password_hash_report_26-09-14_08-01-47.txt
 └── Strings_EMAIL.txt
